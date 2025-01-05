@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.courseReview.CourseReviewsController">
+    <children>
+        <Label fx:id="averageRatingLabel" layoutX="468.0" layoutY="54.0" prefHeight="20.0" prefWidth="144.0" text="Average Rating:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="reviewTable" layoutX="258.0" layoutY="90.0" onKeyTyped="#handleDoubleClick" prefHeight="465.0" prefWidth="624.0">
+            <columns>
+                <TableColumn fx:id="ratingsColumn" prefWidth="71.42401123046875" text="Rating" />
+                <TableColumn fx:id="commentsColumn" prefWidth="440.0639343261719" text="Comments" />
+                <TableColumn fx:id="timestampsColumn" prefWidth="111.3599853515625" text="Date" />
+            </columns>
+        </TableView>
+        <AnchorPane layoutX="22.0" layoutY="9.0" prefHeight="582.0" prefWidth="229.0">
+            <children>
+                <Button layoutX="61.0" layoutY="335.0" mnemonicParsing="false" onAction="#addReviewButton" text="Add Review" />
+                <Button layoutX="52.0" layoutY="386.0" mnemonicParsing="false" onAction="#updateReview" text="Update Review" />
+                <Button layoutX="54.0" layoutY="436.0" mnemonicParsing="false" onAction="#deleteReview" text="Delete Review" />
+                <TextField fx:id="ratingInput" layoutX="34.0" layoutY="118.0" promptText="Rating" />
+                <TextField fx:id="commentInput" layoutX="33.0" layoutY="165.0" prefHeight="88.0" prefWidth="152.0" promptText="Comments" />
+            </children>
+        </AnchorPane>
+      <Button layoutX="1014.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToCourseSearch" text="Back" textAlignment="CENTER" />
+      <Text layoutX="272.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*To see a long comment in its entirety, select the review comment and press any key*" wrappingWidth="486.53997802734375" />
+    </children>
+</Pane>

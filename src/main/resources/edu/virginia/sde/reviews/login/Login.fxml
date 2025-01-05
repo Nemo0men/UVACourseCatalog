@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.login.LoginController">
+   <children>
+      <Label fx:id="connected" layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="110.0" text="Connection">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="71.0" prefHeight="19.0" prefWidth="223.0" text="Please enter username and password:" />
+      <TextField fx:id="userInput" layoutX="38.0" layoutY="115.0" promptText="User Name" />
+      <PasswordField fx:id="passwordInput" layoutX="38.0" layoutY="157.0" promptText="Password" />
+      <Button layoutX="38.0" layoutY="199.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <Label fx:id="errorMsg" layoutX="55.0" layoutY="232.0" prefHeight="19.0" prefWidth="189.0" />
+      <Button layoutX="209.0" layoutY="199.0" mnemonicParsing="false" onAction="#navigateToRegistration" text="Register" />
+      <Button layoutX="38.0" layoutY="259.0" mnemonicParsing="false" onAction="#close" text="Close" />
+   </children>
+</AnchorPane>
